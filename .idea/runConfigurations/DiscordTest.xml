@@ -1,0 +1,26 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="DiscordTest" type="GradleRunConfiguration" factoryName="Gradle">
+    <ExternalSystemSettings>
+      <option name="env">
+        <map>
+          <entry key="DISCORD_WEBHOOK" value="https://discordapp.com/api/webhooks/714915076020109315/_0p_NMfck5Eb2gVbG8tigaZ9p5YEXFyosyP7MU08QTfq24UZL0P3MyNFCbZ4g_lzby0y" />
+        </map>
+      </option>
+      <option name="executionName" />
+      <option name="externalProjectPath" value="$PROJECT_DIR$" />
+      <option name="externalSystemIdString" value="GRADLE" />
+      <option name="scriptParameters" value="--tests &quot;asia.daemon.lovesaemi.discordappender.DiscordTest&quot;" />
+      <option name="taskDescriptions">
+        <list />
+      </option>
+      <option name="taskNames">
+        <list>
+          <option value=":test" />
+        </list>
+      </option>
+      <option name="vmOptions" value="" />
+    </ExternalSystemSettings>
+    <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+    <method v="2" />
+  </configuration>
+</component>

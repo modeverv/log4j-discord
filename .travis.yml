@@ -1,0 +1,4 @@
+sudo: false
+language: java
+env:
+  - DISCORD_WEBHOOK="https://discordapp.com/api/webhooks/714915076020109315/_0p_NMfck5Eb2gVbG8tigaZ9p5YEXFyosyP7MU08QTfq24UZL0P3MyNFCbZ4g_lzby0y"

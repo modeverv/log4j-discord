@@ -1,0 +1,16 @@
+|https://discordapp.com/api/webhooks/714915076020109315/_0p_NMfck5Eb2gVbG8tigaZ9p5YEXFyosyP7MU08QTfq24UZL0P3MyNFCbZ4g_lzby0y
+<?xml version="1.0" ?>
+1<Configuration packages="asia.daemon.lovesaemi">
+  <Appenders>
+£    <Discord name="discord" webhook="https://discordapp.com/api/webhooks/714915076020109315/_0p_NMfck5Eb2gVbG8tigaZ9p5YEXFyosyP7MU08QTfq24UZL0P3MyNFCbZ4g_lzby0y">
+J      <MarkerFilter onMatch="ACCEPT" onMismatch="DENY" marker="DISCORD"/>
+S      <PatternLayout pattern="[%d{yyyy-MM-dd HH:mm:ss.SSS}], %-5p, %t, %c, %m%n"/>
+    </Discord>
+  </Appenders>
+  <Loggers>
+    <Root level="INFO">
+#      <AppenderRef ref="discord"/>
+    </Root>
+  </Loggers>
+</Configuration>
+
