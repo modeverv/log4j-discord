@@ -1,7 +1,7 @@
-# Google Chat Appender for Log4j ![](https://travis-ci.org/modeverv/log4j-discord.svg?branch=master)
+# Discord Appender for Log4j ![](https://travis-ci.org/modeverv/log4j-discord.svg?branch=master)
 
-This is a simple webhook-based Google Chat appender for Log4j 2.x.
-To use this appender in your code, first get a webhook URL from Google Chat.
+This is a simple webhook-based Discord appender for Log4j 2.x.
+To use this appender in your code, first get a webhook URL from Discord.
 Then, add this to your project's dependencies:
 
 ```
@@ -21,21 +21,21 @@ To use this plugin, add the following to your `log4j2.xml` configuration (or tra
 ```
 <Configuration>
     <Appenders>
-        <Slack name="slack" webhook="https://chat.googleapis.com/v1/spa...">
-            <MarkerFilter onMatch="ACCEPT" onMismatch="DENY" marker="GOOGLECHAT"/>
+        <Discord name="discord" webhook="https://discord...">
+            <MarkerFilter onMatch="ACCEPT" onMismatch="DENY" marker="DISCORD"/>
             <PatternLayout pattern="%m"/>
-        </Slack>
+        </Discord>
     </Appenders>
     <Loggers>
         <Root level="info">
-            <AppenderRef ref="slack"/>
+            <AppenderRef ref="discord"/>
         </Root>
     </Loggers>
 </Configuration>
 ```
 
-Using the MarkerFilter configuration like this allows you to send a log message to Slack from any class.
-By using the `GOOGLECHAT` marker, this allows the configuration to filter all messages with that marker and make sure to send them to the GoogleChatAppender.
+Using the MarkerFilter configuration like this allows you to send a log message to Discord from any class.
+By using the `DISCORD` marker, this allows the configuration to filter all messages with that marker and make sure to send them to the DiscordAppender.
 As long as you don't override the additivity property of the relevant loggers, then these log messages will also be logged to the console or file or whatever you have configured normally.
 Read more about markers [here](https://logging.apache.org/log4j/2.x/manual/markers.html).
 
