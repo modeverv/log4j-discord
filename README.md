@@ -47,10 +47,10 @@ The following are all the configuration attributes or elements supported:
 * filter: an optional filter to use; a MarkerFilter is recommended here as described above.
 * ignoreExceptions: whether or not to let exceptions from the appender to be swallowed or propagated.
   This is true by default and should usually only be set to false when using a [FailoverAppender](https://logging.apache.org/log4j/2.x/manual/appenders.html#FailoverAppender) or similar.
-* layout: a string layout to use to format log events into a Slack message.
-  Only `StringLayout` layouts are supported since sending arbitrary binary data to Slack doesn't make sense.
+* layout: a string layout to use to format log events into a Discord message.
+  Only `StringLayout` layouts are supported since sending arbitrary binary data to Discord doesn't make sense.
   If no layout is specified, the default pattern layout is used.
-* webhook: URL to the Slack webhook to send messages to.
+* webhook: URL to the Discord webhook to send messages to.
 
 ## Test
 set environment variable and run test.
