@@ -1,8 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="asia.daemon.lovesaemi.discordappender.DiscordTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-05-26T19:40:30" hostname="seijiro-MBP.local" time="3.418">
+<testsuite name="asia.daemon.lovesaemi.discordappender.DiscordTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2020-05-28T12:39:27" hostname="seijiro-MBP.local" time="7.227">
   <properties/>
-  <testcase name="sendInfoWithoutStack" classname="asia.daemon.lovesaemi.discordappender.DiscordTest" time="3.418"/>
+  <testcase name="sendInfo" classname="asia.daemon.lovesaemi.discordappender.DiscordTest" time="4.912"/>
+  <testcase name="sendInfoLong" classname="asia.daemon.lovesaemi.discordappender.DiscordTest" time="2.315"/>
   <system-out><![CDATA[https://discordapp.com/api/webhooks/714915076020109315/_0p_NMfck5Eb2gVbG8tigaZ9p5YEXFyosyP7MU08QTfq24UZL0P3MyNFCbZ4g_lzby0y
+<?xml version="1.0" ?>
+<Configuration packages="asia.daemon.lovesaemi">
+  <Appenders>
+    <Discord name="discord" webhook="https://discordapp.com/api/webhooks/714915076020109315/_0p_NMfck5Eb2gVbG8tigaZ9p5YEXFyosyP7MU08QTfq24UZL0P3MyNFCbZ4g_lzby0y">
+      <MarkerFilter onMatch="ACCEPT" onMismatch="DENY" marker="DISCORD"/>
+      <PatternLayout pattern="[%d{yyyy-MM-dd HH:mm:ss.SSS}], %-5p, %t, %c, %m%n"/>
+    </Discord>
+  </Appenders>
+  <Loggers>
+    <Root level="INFO">
+      <AppenderRef ref="discord"/>
+    </Root>
+  </Loggers>
+</Configuration>
+
+https://discordapp.com/api/webhooks/714915076020109315/_0p_NMfck5Eb2gVbG8tigaZ9p5YEXFyosyP7MU08QTfq24UZL0P3MyNFCbZ4g_lzby0y
 <?xml version="1.0" ?>
 <Configuration packages="asia.daemon.lovesaemi">
   <Appenders>

@@ -1,4 +1,4 @@
-# Discord Appender for Log4j ![](https://travis-ci.org/modeverv/log4j-discord.svg?branch=master)
+# Discord Appender for Log4j [![Build Status](https://travis-ci.org/modeverv/log4j-discord.svg?branch=master)](https://travis-ci.org/modeverv/log4j-discord)
 
 This is a simple webhook-based Discord appender for Log4j 2.x.
 To use this appender in your code, first get a webhook URL from Discord.

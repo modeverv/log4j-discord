@@ -43,9 +43,19 @@ public class DiscordTest {
 
 
     @Test
-    public void sendInfoWithoutStack() throws InterruptedException {
-        Marker GOOGLECHAT = MarkerManager.getMarker("DISCORD");
-        LogManager.getLogger(getClass()).warn(GOOGLECHAT,"Test warning message");
+    public void sendInfo() throws InterruptedException {
+        Marker DISCORD = MarkerManager.getMarker("DISCORD");
+        LogManager.getLogger(getClass()).warn(DISCORD, "Test warning message");
+        Thread.sleep(2000);
+    }
+    @Test
+    public void sendInfoLong() throws InterruptedException {
+        Marker DISCORD = MarkerManager.getMarker("DISCORD");
+        StringBuilder stringBuilder = new StringBuilder();
+        for(int i=0,l=2001;i<l;i++){
+            stringBuilder.append("x");
+        }
+        LogManager.getLogger(getClass()).warn(DISCORD, stringBuilder.toString());
         Thread.sleep(2000);
     }
 }

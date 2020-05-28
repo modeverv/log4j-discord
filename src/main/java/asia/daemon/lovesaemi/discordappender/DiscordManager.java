@@ -21,7 +21,7 @@ public class DiscordManager extends AbstractManager {
         this.webhook = webhook;
     }
 
-    public void sendMessage(final String message) {
+    public void sendMessage(String message) {
         try {
             HttpURLConnection connection = (HttpURLConnection) webhook.openConnection();
             connection.setDoOutput(true);
@@ -29,6 +29,7 @@ public class DiscordManager extends AbstractManager {
             connection.setRequestProperty("Content-Type", "application/json");
             connection.setRequestProperty("User-Agent","Mozilla/5.0 (Macintosh; U; Intel Mac OS X; ja-JP-mac; rv:1.8.1.6) Gecko/20070725 Firefox/2.0.0.6");
             connection.connect();
+            message = message.substring(0, Math.min(message.length(), 2000));
             try (JsonGenerator generator = factory.createGenerator(connection.getOutputStream())) {
                 generator.writeStartObject();
                 generator.writeStringField("content", message);
