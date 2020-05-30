@@ -7,7 +7,6 @@ Then, add this to your project's dependencies:
 ```
 allprojects {
    repositories {
-        ...
         maven { url 'https://jitpack.io' }
    }
 }
@@ -19,7 +18,7 @@ dependencies {
 To use this plugin, add the following to your `log4j2.xml` configuration (or translate to your preferred format):
 
 ```
-<Configuration>
+<Configuration packages="asia.daemon.lovesaemi.discordappender">
     <Appenders>
         <Discord name="discord" webhook="https://discord...">
             <MarkerFilter onMatch="ACCEPT" onMismatch="DENY" marker="DISCORD"/>
